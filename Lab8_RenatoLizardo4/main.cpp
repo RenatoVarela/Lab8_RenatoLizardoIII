@@ -109,31 +109,27 @@ void juego(char **m)
 
 
         printMatrix(m, 8);
+        i++;
 
         if (i % 2 == 0)
         {
-            movimiento1(m);
+            movimiento2(m);
+            
         }
          if (i % 2 != 0)
         {
+            movimiento1(m);
             
-            movimiento2(m);
+            
         }
 
-        cout<<"INgrese s para salir" <<endl;
+        cout<<"INgrese s 1 para salir" <<endl;
         cin >> s;
-
-        if(s == 1){
-
-            //guarda al salir
-            salir = true;
-            guardar();
-
-        }
+          
 
         
 
-        i++;
+       
     }
 }
 
@@ -225,14 +221,6 @@ void movimiento1(char **matriz)
             }
         
     }
-    
-
-
-            
-        
-    
-
-   
 
     //coordenadas.clear();
 }
@@ -415,7 +403,7 @@ fstream archivo("registro.txt");
     {
          archivo<<movimientos2[1];
     }
-    
+
     archivo.close();
 
 }
